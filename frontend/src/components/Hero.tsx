@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
                 TECNOLOGÍA INMOBILIARIA DE PUNTA
             </span>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-base-content">
-              Predice el <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">valor futuro</span> de cualquier propiedad.
+              Invierte con confianza <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Descubre las oportunidades</span> que el mercado no te muestra.
             </h1>
             <p className="py-6 text-xl text-base-content/70 leading-relaxed">
                NextBlock utiliza inteligencia artificial avanzada para analizar tendencias de mercado, terreno y más de 50 variables. Toma decisiones de inversión con confianza absoluta.
