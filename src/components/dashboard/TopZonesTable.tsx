@@ -1,6 +1,5 @@
 import  { useMemo,useState } from 'react';
 import { useAllData } from '../../context/AllDataContext';
-import { div } from 'framer-motion/client';
 
 const TopZonesTable: React.FC = () => {
     const { filteredData, data } = useAllData();

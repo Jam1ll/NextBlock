@@ -27,7 +27,7 @@ Para ejecutar la aplicación completa, necesitarás dos terminales abiertas: una
 
 ### 1. Configuración del Backend (Puerto 8000)
 
-El backend procesa los datos y sirve la API en `http://127.0.0.1:8000`.
+El backend procesa los datos y sirve la API en vercel
 
 ```bash
 # 1. Navegar al directorio raíz (donde está main.py)
