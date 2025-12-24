@@ -8,7 +8,7 @@ origins = ["http://localhost:5173"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -16,9 +16,9 @@ app.add_middleware(
 
 
 # root
-@app.get("/")
+@app.get("/api")
 def root():
-    return {"message": "This is the root"}
+    return {"message": "Backend successfully working on vercel"}
 
 
 # get all
@@ -30,6 +30,4 @@ def get_all():
     except Exception as e:
         print(f"Error en /api/all: {e}")
         print(f"Tipo de error: {type(e).__name__}")
-        raise HTTPException(
-            status_code=500, detail=f"Error al obtener los datos: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=f"Error getting data: {str(e)}")
