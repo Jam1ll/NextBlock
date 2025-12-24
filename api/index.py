@@ -1,10 +1,13 @@
+import sys
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from Services.preparing_final_data import getData
 
 app = FastAPI()
-
-origins = ["http://localhost:5173"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,13 +18,11 @@ app.add_middleware(
 )
 
 
-# root
 @app.get("/api")
-def root():
-    return {"message": "Backend successfully working on vercel"}
+def api_root():
+    return {"message": "Backend funcionando correctamente en Vercel"}
 
 
-# get all
 @app.get("/api/all")
 def get_all():
     try:
@@ -30,4 +31,6 @@ def get_all():
     except Exception as e:
         print(f"Error en /api/all: {e}")
         print(f"Tipo de error: {type(e).__name__}")
-        raise HTTPException(status_code=500, detail=f"Error getting data: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error al obtener los datos: {str(e)}"
+        )
